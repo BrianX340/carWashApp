@@ -1,0 +1,126 @@
+.balance {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+}
+
+.balance h1 {
+    text-align: center;
+}
+
+.balance>div {
+    display: flex;
+    min-width: 500px;
+    justify-content: space-between;
+}
+
+.transacciones-home {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.chargeButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.chargeActive {
+    opacity: 1;
+    z-index: 1 !important;
+}
+
+.chargeInactive {
+    opacity: 0;
+}
+
+#popupCharge {
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: -1;
+}
+
+.closePopupButton {
+    cursor: pointer;
+}
+
+.inputsContainerPopup {
+    display: flex;
+    flex-direction: column;
+}
+
+.auto-margin {
+    margin:auto;
+}
+
+
+
+/* ANIMATION */
+
+.popup-in {
+    transition: background-color 2s ease-out;
+    -webkit-animation: popup-in-animation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: popup-in-animation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes popup-in-animation {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
+
+@keyframes popup-in-animation {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
+
+.popup-out {
+    -webkit-animation: popup-out-animation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+    animation: popup-out-animation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+}
+
+@-webkit-keyframes popup-out-animation {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
+
+@keyframes popup-out-animation {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
